@@ -1,0 +1,23 @@
+{
+    "name": "finalx/webman",
+    "type": "library",
+    "license": "MIT",
+    "version": "0.0.1",
+    "autoload": {
+        "psr-4": {
+            "Finalx\\Webman\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "D.M",
+            "email": "578328962@qq.com"
+        }
+    ],
+    "require": {
+        "workerman/webman-framework": "^2.1",
+        "illuminate/support": "^12.2",
+        "juststeveking/http-status-code": "^3.0",
+        "tinywan/jwt": "^1.11"
+    }
+}
