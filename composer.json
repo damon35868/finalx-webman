@@ -15,9 +15,9 @@
         }
     ],
     "require": {
-        "workerman/webman-framework": "^2.1",
-        "illuminate/support": "^12.2",
-        "juststeveking/http-status-code": "^3.0",
-        "tinywan/jwt": "^1.11"
+        "workerman/webman-framework": ">=1.0.0",
+        "illuminate/support": ">=1.0",
+        "juststeveking/http-status-code": ">=1.0",
+        "tinywan/jwt": ">=1.0"
     }
 }
