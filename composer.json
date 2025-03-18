@@ -19,9 +19,9 @@
         "illuminate/support": ">=1.0",
         "juststeveking/http-status-code": ">=1.0",
         "tinywan/jwt": ">=1.0",
-        "webman/database": "^2.1",
-        "illuminate/pagination": "^12.2",
-        "illuminate/events": "^12.2",
-        "symfony/var-dumper": "^7.2"
+        "webman/database": ">=1.0",
+        "illuminate/pagination": ">=1.0",
+        "illuminate/events": ">=1.0",
+        "symfony/var-dumper": ">=1.0"
     }
 }
