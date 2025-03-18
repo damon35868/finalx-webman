@@ -2,8 +2,6 @@
 
 namespace Finalx\Webman\Common;
 
-
-use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Str;
 use JustSteveKing\StatusCode\Http;
 use support\Db;
