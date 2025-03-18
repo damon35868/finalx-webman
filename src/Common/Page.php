@@ -54,9 +54,9 @@ class Page
 
 
         // 缺省判断
-        if (Schema::hasColumn($tableName, 'status') && !$cover) $query->where('status', true);
-        if (Schema::hasColumn($tableName, 'deleted_at') && !$cover) $query->where('deleted_at', null);
-        if (Schema::hasColumn($tableName, 'created_at') && !$cover) $query->orderBy('created_at', 'DESC');
+        if (Db::schema()->hasColumn($tableName, 'status') && !$cover) $query->where('status', true);
+        if (Db::schema()->hasColumn($tableName, 'deleted_at') && !$cover) $query->where('deleted_at', null);
+        if (Db::schema()->hasColumn($tableName, 'created_at') && !$cover) $query->orderBy('created_at', 'DESC');
 
         $res = $query->paginate($pageSize, ['*'], 'page', $page);
 
