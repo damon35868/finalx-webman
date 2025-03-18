@@ -2,7 +2,7 @@
     "name": "finalx/webman",
     "type": "library",
     "license": "MIT",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "autoload": {
         "psr-4": {
             "Finalx\\Webman\\": "src/"
@@ -18,6 +18,10 @@
         "workerman/webman-framework": ">=1.0.0",
         "illuminate/support": ">=1.0",
         "juststeveking/http-status-code": ">=1.0",
-        "tinywan/jwt": ">=1.0"
+        "tinywan/jwt": ">=1.0",
+        "webman/database": "^2.1",
+        "illuminate/pagination": "^12.2",
+        "illuminate/events": "^12.2",
+        "symfony/var-dumper": "^7.2"
     }
 }
