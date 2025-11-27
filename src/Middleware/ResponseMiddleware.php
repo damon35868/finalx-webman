@@ -12,8 +12,8 @@ class ResponseMiddleware implements MiddlewareInterface
 {
 
     public function __construct(
-        private ?string $message = config('plugin.finalx.middleware.response.message', "请求成功"),
-        private ?bool $camel = config('plugin.finalx.middleware.response.camel', true),
+        private ?string $message = config('plugin.finalx.webman.middleware.response.message', "请求成功"),
+        private ?bool $camel = config('plugin.finalx.webman.middleware.response.camel', true),
     ) {}
 
     protected function responseKeysToCamelCase($data)

@@ -19,7 +19,7 @@ class JwtMiddleware implements MiddlewareInterface
 {
 
     public function __construct(
-        private ?array $errorMessages = config('plugin.finalx.middleware.jwt', [
+        private ?array $errorMessages = config('plugin.finalx.webman.middleware.jwt', [
             'missingToken' => [Http::UNAUTHORIZED->value, "token不存在~"],
             'signatureInvalid' => [401011, "身份验证令牌无效"],
             'beforeValid' => [401012, "身份验证令牌尚未生效"],
