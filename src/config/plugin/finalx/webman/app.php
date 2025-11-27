@@ -3,6 +3,7 @@
 use JustSteveKing\StatusCode\Http;
 
 return [
+    'enable' => true,
     'middleware' => [
         'jwt' => [
             'missingToken'     => [Http::UNAUTHORIZED->value, "token不存在~"],
