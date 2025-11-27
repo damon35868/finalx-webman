@@ -10,12 +10,6 @@ use Webman\MiddlewareInterface;
 
 class ResponseMiddleware implements MiddlewareInterface
 {
-
-    public function __construct(
-        private ?string $message = config('plugin.finalx.webman.app.middleware.response.message', "请求成功"),
-        private ?bool $camel = config('plugin.finalx.webman.app.middleware.response.camel', true),
-    ) {}
-
     protected function responseKeysToCamelCase($data)
     {
         if (is_object($data))  $data = get_object_vars($data);
@@ -42,8 +36,8 @@ class ResponseMiddleware implements MiddlewareInterface
         $data = json_decode($res->rawBody());
         return json([
             'code' => Http::OK->value,
-            'message' => $this->message,
-            'data' => $this->camel ? $this->responseKeysToCamelCase($data) : $data
+            'message' => config('plugin.finalx.webman.app.middleware.response.message', "请求成功"),
+            'data' => config('plugin.finalx.webman.app.middleware.response.camel', true) ? $this->responseKeysToCamelCase($data) : $data
         ]);
     }
 }
