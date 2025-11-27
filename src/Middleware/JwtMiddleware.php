@@ -19,14 +19,14 @@ class JwtMiddleware implements MiddlewareInterface
 {
 
     public function __construct(
-        private ?array $errorMessages = [
+        private ?array $errorMessages = config('plugin.finalx.middleware.jwt', [
             'missingToken' => [Http::UNAUTHORIZED->value, "token不存在~"],
             'signatureInvalid' => [401011, "身份验证令牌无效"],
             'beforeValid' => [401012, "身份验证令牌尚未生效"],
             'expired' => [401013, "身份验证会话已过期，请重新登录！"],
             'unexpectedValue' => [401014, "获取的扩展字段不存在"],
             'jwtCacheToken' => [401015, "身份验证会话已过期，请再次登录！"],
-        ]
+        ])
     ) {}
 
     public function process(Request $request, callable $handler): Response
